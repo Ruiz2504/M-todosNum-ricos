@@ -13,7 +13,7 @@ Donde:
 
 Para prevenir overflow, se recomienda escalar los valores o elegir tipos de datos con mayor rango.
 
-## Algoritmo del Método Overflow
+### Algoritmo
 
 1. Ingresar los valores \( a \) y \( b \).
 2. Definir \( max\_value \), el límite máximo permitido por el tipo de dato.
@@ -42,7 +42,15 @@ Donde:
 - `floor` es la función piso (mayor entero menor o igual que el argumento).
 - `ceil` es la función techo (menor entero mayor o igual que el argumento).
 
-### Algoritmo
+### Algoritmo del Método de Redondeo
+
+1. Ingresar el número \( x \).
+2. Si \( x \geq 0 \):
+   - Calcular \( resultado = \lfloor x + 0.5 \rfloor \).
+3. Si \( x < 0 \):
+   - Calcular \( resultado = \lceil x - 0.5 \rceil \).
+4. Retornar \( resultado \).
+
 
 <a href="/Tema1/Redondeo/Codigo1.java">Ejercicio 1</a><br>
 <a href="/Tema1/Redondeo/Codigo2.java">Ejercicio 2</a><br>
