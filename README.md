@@ -242,3 +242,26 @@ La solución se encuentra al resolver el sistema a partir de la última ecuació
 <a href="/Tema3/Eliminación Gaussiana/Imple 3.java">Ejercicio 3</a><br>
 <a href="/Tema3/Eliminación Gaussiana/Imple 4.java">Ejercicio 4</a><br>
 <a href="/Tema3/Eliminación Gaussiana/Imple 5.java">Ejercicio 5</a><br>
+
+## Método de Gauss-Jordan
+El método de Gauss-Jordan es una extensión del método de Eliminación Gaussiana que permite obtener la solución exacta de un sistema de ecuaciones lineales directamente, transformando la matriz aumentada en su forma reducida por filas (matriz identidad en el lado de los coeficientes).
+
+### Fórmula
+El método utiliza operaciones elementales de filas para convertir la matriz aumentada \( A|B \) en una matriz identidad \( I|X \), donde \( X \) es la solución del sistema. Esto se logra haciendo ceros arriba y abajo de cada pivote y normalizando los pivotes a 1.
+
+### Algoritmo del Método de Gauss-Jordan
+
+1. Ingresar el sistema de ecuaciones en forma de matriz aumentada \( A|B \).
+2. Para cada columna \( j \) de la matriz:
+   - Dividir la fila \( j \) por el pivote \( A[j][j] \) para normalizarlo a 1.
+   - Restar múltiplos de la fila \( j \) de las demás filas para hacer ceros arriba y abajo del pivote.
+3. Continuar hasta transformar \( A \) en una matriz identidad.
+4. Extraer \( X \) como la solución del sistema.
+
+### Implementaciones con caso de uso
+
+<a href="/Tema3/Método de Gauss-Jordan/Imple (1).java">Ejercicio 1</a><br>
+<a href="/Tema3/Método de Gauss-Jordan/Imple (2).java">Ejercicio 2</a><br>
+<a href="/Tema3/Método de Gauss-Jordan/Imple (3).java">Ejercicio 3</a><br>
+<a href="/Tema3/Método de Gauss-Jordan/Imple (4).java">Ejercicio 4</a><br>
+<a href="/Tema3/Método de Gauss-Jordan/Imple (5).java">Ejercicio 5</a><br>
