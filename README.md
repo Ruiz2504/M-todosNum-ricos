@@ -20,6 +20,22 @@ Para prevenir overflow, se recomienda escalar los valores o elegir tipos de dato
 <a href="/Tema1/Overflow/Imple (4).java">Ejercicio 4</a><br>
 <a href="/Tema1/Overflow/Imple (5).java">Ejercicio 5</a><br>
 <br>
-Método Redondeo <br>
+## Método de Redondeo
+
+El redondeo se calcula como:
+
+- Si \( x \geq 0 \): `round(x) = floor(x + 0.5)`
+- Si \( x < 0 \): `round(x) = ceil(x - 0.5)`
+
+Donde:
+- `x` es el número a redondear.
+- `floor` es la función piso (mayor entero menor o igual que el argumento).
+- `ceil` es la función techo (menor entero mayor o igual que el argumento).
+
+<a href="/Tema1/Redondeo/Codigo1.java">Ejercicio 1</a><br>
+<a href="/Tema1/Redondeo/Codigo2.java">Ejercicio 2</a><br>
+<a href="/Tema1/Redondeo/Codigo3.java">Ejercicio 3</a><br>
+<a href="/Tema1/Redondeo/Codigo4.java">Ejercicio 4</a><br>
+<a href="/Tema1/Redondeo/Codigo5.java">Ejercicio 5</a><br>
 
 
