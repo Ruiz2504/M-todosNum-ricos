@@ -213,3 +213,32 @@ Donde:
 <a href="/Tema2/Métodos de Newton Rapshon/Imple (4).java">Ejercicio 4</a><br>
 <a href="/Tema2/Métodos de Newton Rapshon/Imple (5).java">Ejercicio 5</a><br>
 
+# Tema 3
+
+## Método de Eliminación Gaussiana
+El método de Eliminación Gaussiana es una técnica para resolver sistemas de ecuaciones lineales. Consiste en transformar la matriz aumentada del sistema en una matriz triangular superior mediante operaciones elementales de filas, y luego resolver el sistema por sustitución regresiva.
+
+### Fórmula
+El procedimiento se basa en las operaciones elementales:
+
+1. Escalar filas para que el pivote sea igual a 1.
+2. Hacer ceros por debajo del pivote en la columna correspondiente.
+3. Continuar con las siguientes filas hasta obtener una matriz triangular superior.
+
+La solución se encuentra al resolver el sistema a partir de la última ecuación hacia arriba.
+
+### Algoritmo del Método de Eliminación Gaussiana
+
+1. Ingresar el sistema de ecuaciones en forma de matriz aumentada \( A|B \).
+2. Para cada fila \( i \) de la matriz:
+   - Dividir la fila \( i \) por el pivote \( A[i][i] \).
+   - Restar múltiplos de la fila \( i \) de las filas debajo de ella para hacer ceros.
+3. Realizar sustitución regresiva para encontrar las soluciones.
+
+### Implementaciones con caso de uso
+
+<a href="/Tema3/Eliminación Gaussiana/Imple 1.java">Ejercicio 1</a><br>
+<a href="/Tema3/Eliminación Gaussiana/Imple 2.java">Ejercicio 2</a><br>
+<a href="/Tema3/Eliminación Gaussiana/Imple 3.java">Ejercicio 3</a><br>
+<a href="/Tema3/Eliminación Gaussiana/Imple 4.java">Ejercicio 4</a><br>
+<a href="/Tema3/Eliminación Gaussiana/Imple 5.java">Ejercicio 5</a><br>
