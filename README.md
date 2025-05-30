@@ -83,6 +83,32 @@ Donde:
    - Calcular \( resultado = \lceil x \rceil \).
 4. Retornar \( resultado \).
 
+# Tema 2
+
+## Método de la Secante
+El método de la secante es una técnica numérica para encontrar raíces de una función aproximando la solución mediante líneas secantes entre dos puntos cercanos. A diferencia del método de Newton, no requiere el cálculo de derivadas, lo que lo hace útil cuando la derivada es difícil de obtener. Es un método iterativo que converge rápidamente si se eligen buenos puntos iniciales.
+
+### Fórmula
+La fórmula iterativa del método de la secante es:
+
+\[
+x_{n+1} = x_n - f(x_n) \cdot \frac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})}
+\]
+
+Donde:
+- \( x_n \) y \( x_{n-1} \) son las aproximaciones actuales y anteriores.
+- \( f(x) \) es la función cuyo cero se busca.
+
+### Algoritmo del Método de la Secante
+
+1. Ingresar dos valores iniciales \( x_0 \) y \( x_1 \).
+2. Calcular \( x_{n+1} = x_n - f(x_n) \cdot \frac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})} \).
+3. Verificar si \( |x_{n+1} - x_n| \) es menor que la tolerancia deseada.
+   - Si sí, terminar y retornar \( x_{n+1} \).
+   - Si no, actualizar \( x_{n-1} = x_n \) y \( x_n = x_{n+1} \), luego repetir el paso 2.
+4. Repetir hasta cumplir criterio de convergencia o límite de iteraciones.
+
+
 ### Implementaciones con caso de uso
 
 <a href="/Tema2/Método Secante/Imple (1).java">Ejercicio 1</a><br>
@@ -91,4 +117,36 @@ Donde:
 <a href="/Tema2/Método Secante/Imple (4).java">Ejercicio 4</a><br>
 <a href="/Tema2/Método Secante/Imple (5).java">Ejercicio 5</a><br>
 
+## Método de Bisección
+El método de bisección es una técnica numérica para encontrar raíces de una función continua, dividiendo iterativamente un intervalo donde la función cambia de signo. Se basa en el teorema del valor intermedio, garantizando la existencia de una raíz dentro del intervalo. Es simple, seguro y converge linealmente, aunque puede ser más lento que otros métodos.
+
+### Fórmula
+En cada iteración, se calcula el punto medio:
+
+\[
+x_m = \frac{a + b}{2}
+\]
+
+Donde:
+- \( a \) y \( b \) son los extremos del intervalo actual donde \( f(a) \cdot f(b) < 0 \).
+- \( x_m \) es el nuevo punto medio donde se evalúa \( f(x_m) \).
+
+Según el signo de \( f(x_m) \), se elige el subintervalo que contiene la raíz para la siguiente iteración.
+
+### Algoritmo del Método de Bisección
+
+1. Ingresar el intervalo inicial \([a, b]\) tal que \( f(a) \cdot f(b) < 0 \).
+2. Calcular el punto medio \( x_m = \frac{a + b}{2} \).
+3. Evaluar \( f(x_m) \).
+4. Si \( f(x_m) = 0 \) o el error es menor que la tolerancia, retornar \( x_m \).
+5. Si \( f(a) \cdot f(x_m) < 0 \), entonces asignar \( b = x_m \); si no, asignar \( a = x_m \).
+6. Repetir desde el paso 2 hasta cumplir el criterio de convergencia.
+
+### Implementaciones con caso de uso
+
+<a href="/Tema2/Método Bisección/Imple (1).java">Ejercicio 1</a><br>
+<a href="/Tema2/Método Bisección/Imple (2).java">Ejercicio 2</a><br>
+<a href="/Tema2/Método Bisección/Imple (3).java">Ejercicio 3</a><br>
+<a href="/Tema2/Método Bisección/Imple (4).java">Ejercicio 4</a><br>
+<a href="/Tema2/Método Bisección/Imple (5).java">Ejercicio 5</a><br>
 
