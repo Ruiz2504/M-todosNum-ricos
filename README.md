@@ -150,3 +150,66 @@ Según el signo de \( f(x_m) \), se elige el subintervalo que contiene la raíz 
 <a href="/Tema2/Método Bisección/Imple (4).java">Ejercicio 4</a><br>
 <a href="/Tema2/Método Bisección/Imple (5).java">Ejercicio 5</a><br>
 
+## Método de la Falsa Posición
+El método de la falsa posición es una técnica numérica para encontrar raíces de una función continua que combina la bisección con la interpolación lineal. Se calcula un punto basado en la secante del intervalo, buscando una aproximación más rápida que la bisección. Este método garantiza la convergencia si la función cambia de signo en el intervalo.
+
+### Fórmula
+El punto \( x_r \) se calcula con:
+
+\[
+x_r = b - \frac{f(b)(a - b)}{f(a) - f(b)}
+\]
+
+Donde:
+- \( a \) y \( b \) son los extremos del intervalo con \( f(a) \cdot f(b) < 0 \).
+- \( f(a) \) y \( f(b) \) son los valores de la función en esos puntos.
+
+### Algoritmo del Método de la Falsa Posición
+
+1. Ingresar el intervalo inicial \([a, b]\) tal que \( f(a) \cdot f(b) < 0 \).
+2. Calcular \( x_r = b - \frac{f(b)(a - b)}{f(a) - f(b)} \).
+3. Evaluar \( f(x_r) \).
+4. Si \( f(x_r) = 0 \) o el error es menor que la tolerancia, retornar \( x_r \).
+5. Si \( f(a) \cdot f(x_r) < 0 \), entonces asignar \( b = x_r \); si no, asignar \( a = x_r \).
+6. Repetir desde el paso 2 hasta cumplir el criterio de convergencia.
+
+### Implementaciones con caso de uso
+
+<a href="/Tema2/Método falsa posición/Imple (1).java">Ejercicio 1</a><br>
+<a href="/Tema2/Método falsa posición/Imple (2).java">Ejercicio 2</a><br>
+<a href="/Tema2/Método falsa posición/Imple (3).java">Ejercicio 3</a><br>
+<a href="/Tema2/Método falsa posición/Imple (4).java">Ejercicio 4</a><br>
+<a href="/Tema2/Método falsa posición/Imple (5).java">Ejercicio 5</a><br>
+
+## Método de Newton-Raphson
+El método de Newton-Raphson es un procedimiento iterativo para encontrar raíces de funciones usando la derivada de la función. A partir de una aproximación inicial, se mejora la estimación mediante la fórmula que usa la pendiente de la tangente, logrando una convergencia rápida si la función es suave y la aproximación está cerca de la raíz.
+
+### Fórmula
+La fórmula iterativa es:
+
+\[
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+\]
+
+Donde:
+- \( x_n \) es la aproximación actual.
+- \( f(x) \) es la función.
+- \( f'(x) \) es la derivada de la función.
+
+### Algoritmo del Método de Newton-Raphson
+
+1. Ingresar la aproximación inicial \( x_0 \).
+2. Calcular \( x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \).
+3. Verificar si \( |x_{n+1} - x_n| \) es menor que la tolerancia deseada.
+   - Si sí, retornar \( x_{n+1} \).
+   - Si no, actualizar \( x_n = x_{n+1} \) y repetir el paso 2.
+4. Repetir hasta cumplir criterio de convergencia o límite de iteraciones.
+
+### Implementaciones con caso de uso
+
+<a href="/Tema2/Métodos de Newton Rapshon/Imple (1).java">Ejercicio 1</a><br>
+<a href="/Tema2/Métodos de Newton Rapshon/Imple (2).java">Ejercicio 2</a><br>
+<a href="/Tema2/Métodos de Newton Rapshon/Imple (3).java">Ejercicio 3</a><br>
+<a href="/Tema2/Métodos de Newton Rapshon/Imple (4).java">Ejercicio 4</a><br>
+<a href="/Tema2/Métodos de Newton Rapshon/Imple (5).java">Ejercicio 5</a><br>
+
