@@ -327,3 +327,11 @@ Donde:
    - Calcular cada \( x_i^{(k+1)} \) usando los valores de \( \mathbf{x}^{(k)} \) y la fórmula iterativa.
 4. Evaluar el criterio de convergencia:
    - Si la norma de la diferencia \( ||\mathbf{x}^{(k+1)} - \mathbf{x}^{(k)}|| \) es menor que un umbral dado (tolerancia),
+
+## Implementaciones con caso de uso
+
+<a href="/Tema3/Método%20de%20Jacobi/Imple%20(1).java">Ejercicio 1</a><br>
+<a href="/Tema3/Método%20de%20Jacobi/Imple%20(2).java">Ejercicio 2</a><br>
+<a href="/Tema3/Método%20de%20Jacobi/Imple%20(3).java">Ejercicio 3</a><br>
+<a href="/Tema3/Método%20de%20Jacobi/Imple%20(4).java">Ejercicio 4</a><br>
+<a href="/Tema3/Método%20de%20Jacobi/Imple%20(5).java">Ejercicio 5</a><br>
