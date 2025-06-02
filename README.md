@@ -265,3 +265,65 @@ El método utiliza operaciones elementales de filas para convertir la matriz aum
 <a href="/Tema3/Método de Gauss-Jordan/Imple (3).java">Ejercicio 3</a><br>
 <a href="/Tema3/Método de Gauss-Jordan/Imple (4).java">Ejercicio 4</a><br>
 <a href="/Tema3/Método de Gauss-Jordan/Imple (5).java">Ejercicio 5</a><br>
+
+# Método de Gauss-Seidel
+
+El método de Gauss-Seidel es un método iterativo utilizado para resolver sistemas de ecuaciones lineales. Este método es particularmente útil cuando el sistema es grande y escasamente poblado, ya que reduce significativamente el costo computacional en comparación con métodos directos.
+
+## Fórmula
+
+El método se basa en la iteración de las siguientes ecuaciones, donde \( x_i^{(k+1)} \) es la aproximación de la \( i \)-ésima variable en la \( k+1 \)-ésima iteración:
+
+\[
+x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j=1}^{i-1} a_{ij}x_j^{(k+1)} - \sum_{j=i+1}^n a_{ij}x_j^{(k)} \right)
+\]
+
+Donde:
+- \( a_{ii} \): es el elemento diagonal de la matriz de coeficientes.
+- \( b_i \): es el término independiente correspondiente.
+- \( x_j^{(k+1)} \): utiliza el valor más reciente de la iteración actual (para \( j < i \)).
+- \( x_j^{(k)} \): utiliza el valor de la iteración anterior (para \( j > i \)).
+
+## Algoritmo del Método de Gauss-Seidel
+
+1. Representar el sistema de ecuaciones lineales en forma matricial \( A \mathbf{x} = \mathbf{b} \).
+2. Inicializar un vector \( \mathbf{x}^{(0)} \) con valores iniciales (habitualmente ceros).
+3. Para cada iteración \( k+1 \), realizar los siguientes pasos:
+   - Para cada variable \( x_i \), actualizar su valor usando la fórmula iterativa.
+4. Evaluar el criterio de convergencia:
+   - Si la norma de la diferencia \( ||\mathbf{x}^{(k+1)} - \mathbf{x}^{(k)}|| \) es menor que un umbral dado (tolerancia), detener el proceso.
+5. Retornar \( \mathbf{x} \) como la solución aproximada del sistema.
+
+## Implementaciones con caso de uso
+
+<a href="/Tema3/Método de Gauss-Seidel/Imple (1).java">Ejercicio 1</a><br>
+<a href="/Tema3/Método de Gauss-Seidel/Imple (2).java">Ejercicio 2</a><br>
+<a href="/Tema3/Método de Gauss-Seidel/Imple (3).java">Ejercicio 3</a><br>
+<a href="/Tema3/Método de Gauss-Seidel/Imple (4).java">Ejercicio 4</a><br>
+<a href="/Tema3/Método de Gauss-Seidel/Imple (5).java">Ejercicio 5</a><br>
+
+# Método de Jacobi
+
+El método de Jacobi es un método iterativo utilizado para resolver sistemas de ecuaciones lineales. Es especialmente útil para sistemas grandes y dispersos y, al igual que el método de Gauss-Seidel, requiere que el sistema sea diagonalmente dominante para garantizar su convergencia.
+
+## Fórmula
+
+En cada iteración, el método calcula una nueva aproximación para cada variable \( x_i \) utilizando únicamente los valores de la iteración anterior. La fórmula iterativa es:
+
+\[
+x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j=1, j \neq i}^n a_{ij}x_j^{(k)} \right)
+\]
+
+Donde:
+- \( a_{ii} \): es el elemento diagonal de la matriz de coeficientes.
+- \( b_i \): es el término independiente correspondiente.
+- \( x_j^{(k)} \): es el valor de la variable \( j \) en la iteración anterior.
+
+## Algoritmo del Método de Jacobi
+
+1. Representar el sistema de ecuaciones lineales en forma matricial \( A \mathbf{x} = \mathbf{b} \).
+2. Inicializar un vector \( \mathbf{x}^{(0)} \) con valores iniciales (habitualmente ceros).
+3. Para cada iteración \( k+1 \):
+   - Calcular cada \( x_i^{(k+1)} \) usando los valores de \( \mathbf{x}^{(k)} \) y la fórmula iterativa.
+4. Evaluar el criterio de convergencia:
+   - Si la norma de la diferencia \( ||\mathbf{x}^{(k+1)} - \mathbf{x}^{(k)}|| \) es menor que un umbral dado (tolerancia),
